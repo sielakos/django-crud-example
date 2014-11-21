@@ -1,0 +1,19 @@
+Count: {{ employee_list|length }}<br>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Salary</th>
+        <th>Department</th>
+    </tr>
+{% for employee in employee_list %}
+    <tr>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.surname }}</td>
+        <td>{{ employee.salary }}</td>
+        <td><a href="{% url 'sklepapp:department' employee.department.id %}">{{ employee.department.name }}</a></td>
+    </tr>
+{% endfor %}
+</table>
+
+

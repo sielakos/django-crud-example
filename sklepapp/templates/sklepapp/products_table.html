@@ -1,0 +1,16 @@
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Supplier</th>
+        <th>Department</th>
+    </tr>
+    {% for product in product_list %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.supplier }}</td>
+            <td><a href="{% url 'sklepapp:department' product.department.id %}">{{ product.department.name }}</a></td>
+        </tr>
+    {% endfor %}
+</table>

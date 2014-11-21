@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'sklepapp/css/bootstrap.css' %}">
+</head>
+<body>
+    {% include 'sklepapp/menu.html' %}
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
