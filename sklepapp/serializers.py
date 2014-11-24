@@ -11,8 +11,8 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
-    product_set = serializers.RelatedField(many=True)
-    employee_set = serializers.RelatedField(many=True)
+    product_set = serializers.PrimaryKeyRelatedField(many=True)
+    employee_set = serializers.PrimaryKeyRelatedField(many=True)
     manager = serializers.RelatedField()
 
     class Meta:
